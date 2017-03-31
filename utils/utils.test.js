@@ -1,4 +1,5 @@
-const utils = require("./utils");
+const expect = require("expect"),
+      utils  = require("./utils");
 
 it("should add two numbers", () => {
     var res = utils.add(33, 11);
@@ -6,6 +7,10 @@ it("should add two numbers", () => {
         throw new Error(`Expected 44, but got ${res}`);
     }
 }); //takes two arguments - the first is a description, and next is a function
+
+console.log("*******EXPECT RUNNING*********");
+expect(res).toBe(44);
+console.log("******************************");
 
 it("should square a number", () => {
     var res = utils.square(8);
