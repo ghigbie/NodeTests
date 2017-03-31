@@ -12,6 +12,12 @@ it("should add two numbers", () => {
     // }
 }); //takes two arguments - the first is a description, and next is a function
 
+if("should asyn add two numbers", () => {
+    utils.asynAdd(4, 3, (sum) => {
+        expect(sum).toBe(7).toBeA("number");
+    });
+});
+
 it("should square a number", () => {
     var res = utils.square(8);
     console.log("*******EXPECT RUNNING*********");
