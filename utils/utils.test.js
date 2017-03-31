@@ -36,3 +36,17 @@ it("should epect some values", () => {
 it("shold expect some values", () => {
     expect([2,3,5]).toExclude(7);
 });
+//should verify that first and last names are set
+//assert in includes firstName and lastName with proper values
+it("should expect first and last names set as strings", () => {
+    var user = {location: "Tucson, AZ"};
+    var res = utils.setName(user, "George Higbie");
+    expect(user).toEqual(res);
+    expect(res).toInclude({
+        firstName: "George",
+        lastName: "Higbie"
+    }).toBeA("object");
+
+    expect(res.firstName).toBeA("string");
+    expect(res.lastName).toBeA("string");
+});
