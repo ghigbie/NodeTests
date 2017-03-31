@@ -14,7 +14,9 @@ it("should add two numbers", () => {
 
 it("should square a number", () => {
     var res = utils.square(8);
-    if(res !== 64){
-        throw new Errot(`Expected 64, but got ${res}`);
-    }
+    console.log("*******EXPECT RUNNING*********");
+    expect(res).toBe(64).toBeA("number");
+    // if(res !== 64){
+    //     throw new Errot(`Expected 64, but got ${res}`);
+    // }
 });
