@@ -4,7 +4,7 @@ const expect = require("expect"),
 it("should add two numbers", () => {
     var res = utils.add(33, 11);
     console.log("*******EXPECT RUNNING*********");
-    expect(res).toBe(40);
+    expect(res).toBe(44).toBeA("number");
     // console.log("******************************");
 
     // if(res !== 44){
