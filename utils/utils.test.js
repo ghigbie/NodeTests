@@ -20,3 +20,19 @@ it("should square a number", () => {
     //     throw new Errot(`Expected 64, but got ${res}`);
     // }
 });
+
+it("should expect some values", () => {
+    expect(12).toNotBe(11);
+});
+
+it("should epect some values", () => {
+    expect({name: "Yippie"}).toEqual({name: "Yippie"})
+});
+
+it("should epect some values", () => {
+    expect([2,3,4]).toInclude(3);
+});
+
+it("shold expect some values", () => {
+    expect([2,3,5]).toExclude(7);
+});
