@@ -1,11 +1,13 @@
 const express = require("express");
 
+const port = process.env.PORT || 3000;
+
 let app = express();
 
 app.get("/", (req, res) => {
     res.send("<h1>Yo!</h1>");
 });
 
-app.listen(3000, process.env.IP, () => {
-    consle.log("Server is up on port 3000.");
+app.listen(port, process.env.IP, () => {
+    console.log(`Sever is up on port ${port}.`);
 });
