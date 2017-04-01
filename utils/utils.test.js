@@ -19,6 +19,13 @@ it("should async add two numbers", (done) => {
     });
 });
 
+it("should async square a number", (done) => {
+    utils.asyncSquare(4, (square) => {
+        expect(square).toBe(18).toBeA("number");
+        done();
+    });
+});
+
 it("should square a number", () => {
     var res = utils.square(8);
     console.log("*******EXPECT RUNNING*********");
