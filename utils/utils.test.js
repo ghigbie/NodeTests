@@ -12,9 +12,10 @@ it("should add two numbers", () => {
     // }
 }); //takes two arguments - the first is a description, and next is a function
 
-if("should asyn add two numbers", () => {
-    utils.asynAdd(4, 3, (sum) => {
+it("should async add two numbers", (done) => {
+    utils.asyncAdd(4, 3, (sum) => {
         expect(sum).toBe(7).toBeA("number");
+        done();
     });
 });
 
