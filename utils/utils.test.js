@@ -1,6 +1,9 @@
 const expect = require("expect"),
       utils  = require("./utils");
 
+
+describe("Utils",  () => {
+
 it("should add two numbers", () => {
     var res = utils.add(33, 11);
     console.log("*******EXPECT RUNNING*********");
@@ -34,6 +37,8 @@ it("should square a number", () => {
     //     throw new Errot(`Expected 64, but got ${res}`);
     // }
 });
+
+});//end of describe block
 
 it("should expect some values", () => {
     expect(12).toNotBe(11);

@@ -6,21 +6,20 @@ let app = express();
 
 app.get("/", (req, res) => {
     res.status(404).send({
-        error: "Page not found"
+        error: "Page not found",
+        name: "Todo App v1.0"
     });
 });
 
 app.get("/users", (req, res) => {
     res.status(200).send([{
-                name: Billy,
+                name: "Billy",
                 age: 34
-            },
-            {
-                name: Beth,
+            },{
+                name: "Beth",
                 age: 35
-            },
-            {
-                name: Joe,
+            },{
+                name: "Joe",
                 age: 25
     }]);
 });
