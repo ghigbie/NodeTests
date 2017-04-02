@@ -4,39 +4,41 @@ const expect = require("expect"),
 
 describe("Utils",  () => {
 
-it("should add two numbers", () => {
-    var res = utils.add(33, 11);
-    console.log("*******EXPECT RUNNING*********");
-    expect(res).toBe(44).toBeA("number");
-    // console.log("******************************");
+    describe("#Add",  () => {
+        it("should add two numbers", () => {
+            var res = utils.add(33, 11);
+            expect(res).toBe(44).toBeA("number");
 
-    // if(res !== 44){
-    //     throw new Error(`Expected 44, but got ${res}`);
-    // }
-}); //takes two arguments - the first is a description, and next is a function
+            // if(res !== 44){
+            //     throw new Error(`Expected 44, but got ${res}`);
+            // }
+        });
 
-it("should async add two numbers", (done) => {
-    utils.asyncAdd(4, 3, (sum) => {
-        expect(sum).toBe(7).toBeA("number");
-        done();
-    });
-});
+        it("should async add two numbers", (done) => {
+            utils.asyncAdd(4, 3, (sum) => {
+                expect(sum).toBe(7).toBeA("number");
+                done();
+            });
+        });
+    });// end of describe block
 
-it("should async square a number", (done) => {
-    utils.asyncSquare(4, (square) => {
-        expect(square).toBe(16).toBeA("number");
-        done();
-    });
-});
 
-it("should square a number", () => {
-    var res = utils.square(8);
-    console.log("*******EXPECT RUNNING*********");
-    expect(res).toBe(64).toBeA("number");
-    // if(res !== 64){
-    //     throw new Errot(`Expected 64, but got ${res}`);
-    // }
-});
+    describe("#Square", () => {
+        it("should async square a number", (done) => {
+            utils.asyncSquare(4, (square) => {
+                expect(square).toBe(16).toBeA("number");
+                done();
+            });
+        });
+
+        it("should square a number", () => {
+            var res = utils.square(8);
+            expect(res).toBe(64).toBeA("number");
+            // if(res !== 64){
+            //     throw new Errot(`Expected 64, but got ${res}`);
+            // }
+        });
+    });//end of describe block
 
 });//end of describe block
 
