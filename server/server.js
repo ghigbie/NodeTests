@@ -11,3 +11,5 @@ app.get("/", (req, res) => {
 app.listen(port, process.env.IP, () => {
     console.log(`Sever is up on port ${port}.`);
 });
+
+modules.exports.app = app;
