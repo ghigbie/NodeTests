@@ -11,9 +11,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/users", (req, res) => {
-    res.status(200).send({
-        users: [
-            {
+    res.status(200).send([{
                 name: Billy,
                 age: 34
             },
@@ -24,9 +22,7 @@ app.get("/users", (req, res) => {
             {
                 name: Joe,
                 age: 25
-            }
-        ]
-    });
+    }]);
 });
 
 app.listen(port, process.env.IP, () => {
