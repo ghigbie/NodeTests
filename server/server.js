@@ -10,6 +10,25 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/users", (req, res) => {
+    res.status(200).send({
+        users: [
+            {
+                name: Billy,
+                age: 34
+            },
+            {
+                name: Beth,
+                age: 35
+            },
+            {
+                name: Joe,
+                age: 25
+            }
+        ]
+    });
+});
+
 app.listen(port, process.env.IP, () => {
     console.log(`Sever is up on port ${port}.`);
 });
