@@ -18,6 +18,9 @@ it("should redturn an object of users", (done) => {
     request(app)
         .get("/users")
         .expect(200)
-        .expect(res.body).toBeA(object)
+        .expect(res.body).toInclude({
+            name: "Billy",
+            age: 34
+        })
         .end(done);
 });
